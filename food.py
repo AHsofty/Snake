@@ -4,12 +4,11 @@ import random
 
 class Food():
 	def __init__(self, size, screenSize):
-			self.size = size
-
-			self.x = self.get_num(0, screenSize[0], self.size)
-			self.y = self.get_num(0, screenSize[1], self.size)
-
-			self.body = pygame.Rect(self.x, self.y, self.size, self.size)
+		self.size = size
+		self.x = self.get_num(0, screenSize[0], self.size)
+		self.y = self.get_num(0, screenSize[1], self.size)
+		
+		self.body = pygame.Rect(self.x, self.y, self.size, self.size)
 
 	def draw(self, screen, color):
 		pygame.draw.rect(screen, color, pygame.Rect(self.x, self.y, self.size, self.size))
